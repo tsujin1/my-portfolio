@@ -9,9 +9,8 @@ const SkillCategory = ({ title, items, themeClasses, delay = 0 }) => {
       className={`rounded-2xl shadow-lg p-6 mb-8 ${themeClasses.cardBg} ${themeClasses.border} w-full max-w-6xl mx-auto transition-all duration-500 hover:shadow-xl`}
       style={{ animationDelay: `${delay}ms` }}
     >
-      <h3 className={`text-2xl md:text-3xl font-bold mb-8 text-center ${themeClasses.text} relative`}>
+      <h3 className={`text-2xl md:text-3xl font-bold mb-8 text-center capitalize ${themeClasses.text} relative`}>
         {title}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
       </h3>
       
       <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
