@@ -15,16 +15,19 @@ const SkillCategory = ({ title, items, themeClasses, delay = 0 }) => {
       </h3>
       
       <div className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
-        {items.map((item, index) => (
-          <SkillItem
-            key={`${title}-${item.name}`}
-            item={item}
-            index={index}
-            themeClasses={themeClasses}
-            isHovered={hoveredItem === index}
-            onHover={() => setHoveredItem(index)}
-            onLeave={() => setHoveredItem(null)}
-          />
+        {items
+          .slice() // creates a shallow copy so you don't mutate the original props
+          .sort((a, b) => a.name.localeCompare(b.name)) // alphabetize by name
+          .map((item, index) => (
+            <SkillItem
+              key={`${title}-${item.name}`}
+              item={item}
+              index={index}
+              themeClasses={themeClasses}
+              isHovered={hoveredItem === index}
+              onHover={() => setHoveredItem(index)}
+              onLeave={() => setHoveredItem(null)}
+            />
         ))}
       </div>
     </div>
