@@ -34,7 +34,7 @@ const ExperienceCard = ({ exp, isDark, themeClasses }) => {
         </div>
   
         {/* Description */}
-        <p className={`${themeClasses.textSecondary} mb-6 leading-relaxed text-base`}>
+        <p className={`${themeClasses.textSecondary} mb-6 leading-relaxed text-base text-justify`}>
           {exp.description}
         </p>
   
