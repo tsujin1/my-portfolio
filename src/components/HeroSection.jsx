@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import useThemeClasses from './hooks/useThemeClasses';
 import { Mail, FileDown, MapPin, Code, Zap } from 'lucide-react';
 
 const HeroSection = ({ isDark, themeClasses }) => {
