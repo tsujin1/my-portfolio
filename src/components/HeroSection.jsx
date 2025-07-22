@@ -61,7 +61,7 @@ const HeroSection = ({ isDark, themeClasses }) => {
     };
 
     return (
-        <section className={`${themeClasses.heroBg} min-h-screen flex items-center relative overflow-hidden`}>
+        <section className={`${themeClasses.bg} min-h-screen flex items-center relative overflow-hidden`}>
             {/* Background Pattern */}
             <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
             
