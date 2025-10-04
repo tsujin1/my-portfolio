@@ -124,8 +124,7 @@ const AboutSection: React.FC = () => {
                 {skills.map((skill, index) => (
                   <span
                     key={index}
-                    className={`px-4 py-2 rounded-full text-sm font-medium border shadow-sm transition-all duration-300 hover:scale-105 ${
-                      skill.category === 'framework'
+                    className={`px-4 py-2 rounded-full text-sm font-medium border shadow-sm transition-all duration-300 hover:scale-105 ${skill.category === 'framework'
                         ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 border-blue-200/50 dark:border-blue-700/40'
                         : skill.category === 'styling'
                           ? 'bg-purple-50 dark:bg-purple-900/20 text-purple-700 dark:text-purple-400 border-purple-200/50 dark:border-purple-700/40'
@@ -134,7 +133,7 @@ const AboutSection: React.FC = () => {
                             : skill.category === 'tools'
                               ? 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-400 border-orange-200/50 dark:border-orange-700/40'
                               : 'bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-200/50 dark:border-gray-700'
-                    }`}
+                      }`}
 
                   >
                     {skill.name}

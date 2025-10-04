@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 const App: React.FC = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500 overflow-hidden">
-      
+
       {/* ✨ Twinkling Dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(80)].map((_, i) => (
@@ -43,7 +43,7 @@ const App: React.FC = () => {
 
       {/* Footer Section */}
       <Footer />
-      
+
       {/* 🎨 Animations */}
       <style>{`
         /* Twinkling stars */
