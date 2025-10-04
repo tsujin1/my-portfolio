@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
 
   const developerProfile: DeveloperProfile = {
     name: "Justin Rich",
-    role: "Web Developer",
+    role: "Software Developer",
     skills: ["React", "Tailwind CSS", "JavaScript"],
     passion: "Building elegant solutions",
     availability: "Open to opportunities"
