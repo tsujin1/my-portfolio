@@ -34,7 +34,7 @@ const AboutSection: React.FC = () => {
     { name: "Vue", category: "framework" },
     { name: "Tailwind CSS", category: "styling" },
     { name: "Bootstrap", category: "styling" },
-    { name: "PHP", category: "language" },
+    { name: "CodeIgniter", category: "framework" },
     { name: "JavaScript", category: "language" },
     { name: "C++", category: "language" },
     { name: "Java", category: "language" },
@@ -72,7 +72,7 @@ const AboutSection: React.FC = () => {
           {/* Left Column - Profile Card */}
           <div className="w-full aspect-[3/4] rounded-xl overflow-hidden mb-4 order-2 lg:order-1">
             <img
-              src="/images/unnamed.png"
+              src="/images/profile.png"
               alt="Profile"
               className="w-full h-full sm:w-10/12 sm:h-10/12 object-contain"
             />
