@@ -121,7 +121,7 @@ export default developer;`;
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* Left side - Text content */}
-          <div className="space-y-8">
+          <div className="space-y-8 order-2 lg:order-1">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
               <Sparkles size={16} className="text-blue-600 dark:text-blue-400" />
               <span className="text-sm font-medium text-blue-600 dark:text-blue-400">
@@ -165,7 +165,7 @@ export default developer;`;
           </div>
 
           {/* Right side - Code snippet */}
-          <div className="relative" style={{ animation: 'float 6s ease-in-out infinite' }}>
+          <div className="relative order-1 lg:order-2" style={{ animation: 'float 6s ease-in-out infinite' }}>
             <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl opacity-20 blur-2xl" />
 
             <div className="relative bg-gray-800 dark:bg-gray-900 rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
