@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Code, Layers, Zap } from 'lucide-react';
+import { Mail, Linkedin, Code, Layers, Zap } from 'lucide-react'; 
 
 interface Skill {
   name: string;

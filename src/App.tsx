@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Project from "./components/Projects";
 import Certification from "./components/Certifications";
 import Footer from "./components/Footer";
 
@@ -37,6 +38,9 @@ const App: React.FC = () => {
 
       {/* About Section */}
       <About />
+
+      {/* Project Section */}
+      <Project />
 
       {/* Certification Section */}
       <Certification />

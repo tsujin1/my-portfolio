@@ -51,14 +51,14 @@ const Certification: React.FC<CertificationProps> = ({ certs, compact = false })
             <div className="max-w-7xl mx-auto relative">
 
                 {/* Section Header */}
-                <div className="mb-16">
+                <div className="mb-16 text-right">
                     <div className="inline-block px-5 py-1.5 bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-xs font-semibold rounded-full mb-5 shadow-sm">
                         ACHIEVEMENTS
                     </div>
                     <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-3">
                         Certifications
                     </h2>
-                    <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
+                    <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl ml-auto">
                         Professional certifications and credentials earned throughout my journey
                     </p>
                 </div>
