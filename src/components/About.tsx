@@ -36,6 +36,7 @@ const AboutSection: React.FC = () => {
     { name: "Bootstrap", category: "styling" },
     { name: "CodeIgniter", category: "framework" },
     { name: "JavaScript", category: "language" },
+    { name: "TypeScript", category: "language" },
     { name: "C++", category: "language" },
     { name: "Java", category: "language" },
     { name: "Python", category: "language" },
