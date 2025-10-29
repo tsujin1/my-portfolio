@@ -60,7 +60,7 @@ const HeroSection: React.FC = () => {
     return () => clearInterval(timer);
   }, [fullText]);
 
-  const codeSnippet: string = `const developer = {
+  const codeSnippet: string = `const programmer = {
   name: "${developerProfile.name}",
   role: "${developerProfile.role}",
   skills: ${JSON.stringify(developerProfile.skills)},
