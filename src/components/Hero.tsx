@@ -28,7 +28,7 @@ const HeroSection: React.FC = () => {
   const heroContent: HeroContent = {
     greeting: "Hello,",
     fullName: "I'm Justin Rich",
-    title: "Software Developer",
+    title: "Programmer",
     badge: "Welcome to my portfolio",
     roleTag: "Designing Interfaces | Building Digital Futures",
     description: "Crafting intuitive, visually appealing interfaces that enhance user interaction while delivering seamless and modern web experiences.",
@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
 
   const developerProfile: DeveloperProfile = {
     name: "Justin Rich",
-    role: "Software Developer",
+    role: "Programmer",
     skills: ["React", "Tailwind CSS", "JavaScript"],
     passion: "Building elegant solutions",
     availability: "Open to opportunities"
