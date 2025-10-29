@@ -154,7 +154,7 @@ export default developer;`;
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <a href="/files/Justin_Rich_Dimaandal_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/files/Justin_Dimaandal_Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
                   {heroContent.button.primary}
                 </button>
