@@ -41,7 +41,6 @@ const AboutSection: React.FC = () => {
     { name: "Node.js", category: "framework" },
     { name: "Express", category: "framework" },
     { name: "React", category: "framework" },
-    { name: "Vue", category: "framework" },
     { name: "CodeIgniter", category: "framework" },
   
     // Styling
