@@ -60,26 +60,7 @@ Clone the repository and install dependencies:
 git clone https://github.com/tsujin1/my-portfolio.git
 cd my-portfolio
 npm install
-
-Run the development server:
 npm run dev
-
-Build for production:
 npm run build
-
-Preview the production build:
 npm run preview
 
----
-
-🌐 Live Demo
-
-Live Site: justin-rich-dimaandal-portfolio.vercel.app
-
----
-
-📄 License
-
-© 2025 Justin Rich. All rights reserved.
-
-Built using React, TypeScript, and Tailwind CSS.
