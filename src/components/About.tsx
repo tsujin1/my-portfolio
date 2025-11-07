@@ -36,6 +36,7 @@ const AboutSection: React.FC = () => {
     { name: "Python", category: "language" },
     { name: "Java", category: "language" },
     { name: "C++", category: "language" },
+    { name: "SQL", category: "language" },
   
     // Frameworks / Backend
     { name: "Node.js", category: "framework" },
