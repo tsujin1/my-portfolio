@@ -3,7 +3,7 @@ import { Mail, Linkedin, Code, Layers, Zap } from 'lucide-react';
 
 interface Skill {
   name: string;
-  category: 'framework' | 'styling' | 'language' | 'concept' | 'tools';
+  category: 'framework' | 'styling' | 'language' | 'concept' | 'tools' | 'database';
 }
 
 interface ValueCard {
@@ -30,6 +30,7 @@ const AboutSection: React.FC = () => {
   };
 
   const skills: Skill[] = [
+<<<<<<< HEAD
     // Languages
     { name: "JavaScript", category: "language" },
     { name: "TypeScript", category: "language" },
@@ -56,6 +57,39 @@ const AboutSection: React.FC = () => {
     { name: "UI/UX Design", category: "concept" },
     { name: "Responsive Design", category: "concept" }
   ];
+=======
+  // Languages
+  { name: "JavaScript", category: "language" },
+  { name: "TypeScript", category: "language" },
+  { name: "Java", category: "language" },
+  { name: "Python", category: "language" },
+
+  // Frameworks
+  { name: "React", category: "framework" },
+  { name: "CodeIgniter", category: "framework" },
+  { name: "Node.js", category: "framework" },
+  { name: "Express", category: "framework" },
+  { name: "Socket.io", category: "framework" },
+
+  // Styling
+  { name: "Tailwind CSS", category: "styling" },
+  { name: "Bootstrap", category: "styling" },
+
+  // Databases
+  { name: "MongoDB", category: "database" },
+  { name: "SQL", category: "database" },
+
+  // Tools
+  { name: "Microsoft Sharepoint", category: "tools" },
+  { name: "Power Apps", category: "tools" },
+  { name: "Power Automate", category: "tools" },
+
+  // Concepts
+  { name: "UI/UX Design", category: "concept" },
+  { name: "Responsive Design", category: "concept" }
+];
+
+>>>>>>> 197ca15 (Update project and resume)
 
 
   const valueCards: ValueCard[] = [
