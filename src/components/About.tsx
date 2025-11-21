@@ -30,34 +30,6 @@ const AboutSection: React.FC = () => {
   };
 
   const skills: Skill[] = [
-<<<<<<< HEAD
-    // Languages
-    { name: "JavaScript", category: "language" },
-    { name: "TypeScript", category: "language" },
-    { name: "Python", category: "language" },
-    { name: "Java", category: "language" },
-    { name: "C++", category: "language" },
-    { name: "SQL", category: "language" },
-  
-    // Frameworks / Backend
-    { name: "Node.js", category: "framework" },
-    { name: "Express", category: "framework" },
-    { name: "React", category: "framework" },
-    { name: "CodeIgniter", category: "framework" },
-  
-    // Styling
-    { name: "Tailwind CSS", category: "styling" },
-    { name: "Bootstrap", category: "styling" },
-  
-    // Tools
-    { name: "Microsoft Power Platform", category: "tools" },
-    { name: "Microsoft Sharepoint", category: "tools" },
-  
-    // Concepts
-    { name: "UI/UX Design", category: "concept" },
-    { name: "Responsive Design", category: "concept" }
-  ];
-=======
   // Languages
   { name: "JavaScript", category: "language" },
   { name: "TypeScript", category: "language" },
@@ -88,8 +60,6 @@ const AboutSection: React.FC = () => {
   { name: "UI/UX Design", category: "concept" },
   { name: "Responsive Design", category: "concept" }
 ];
-
->>>>>>> 197ca15 (Update project and resume)
 
 
   const valueCards: ValueCard[] = [
