@@ -160,7 +160,6 @@ export default developer;`;
                 </button>
               </a>
 
-
             </div>
           </div>
 
