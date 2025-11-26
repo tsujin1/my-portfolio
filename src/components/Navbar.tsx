@@ -1,35 +1,30 @@
-import React, { useState, useEffect } from "react";
-import { Moon, Sun, Mail, Linkedin } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Moon, Sun, Menu, X, Github, Linkedin, Mail } from "lucide-react";
+import { SOCIAL_LINKS } from "../data/profile";
 
-// Type definition for navbar config
-type NavbarConfig = {
-  logoText: string;
-  email: string;
-  linkedIn: string;
-};
+const NAV_LINKS = [
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#projects" },
+  { name: "Certifications", href: "#certifications" },
+];
 
-// Navbar configuration constant
-const navbar: NavbarConfig = {
-  logoText: "justinrich.",
-  email: "justindimaandal.work@gmail.com",
-  linkedIn: "https://www.linkedin.com/in/justin-rich-dimaandal/",
-};
-
-const Navbar: React.FC = () => {
-  const [scrolled, setScrolled] = useState<boolean>(false);
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = (): void => {
-      setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    document.documentElement.classList.remove("dark");
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setDarkMode(true);
+    }
   }, []);
 
   useEffect(() => {
@@ -40,57 +35,91 @@ const Navbar: React.FC = () => {
     }
   }, [darkMode]);
 
-  const toggleDarkMode = (): void => setDarkMode((prev) => !prev);
-
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4">
+    <nav className={`fixed top-0 left-0 right-0 z-50 flex justify-center px-4 sm:px-6 transition-all duration-300 ${scrolled ? 'pt-4' : 'pt-6'}`}>
+      
       <div
-        className={`max-w-7xl mx-auto transition-all duration-500 ease-in-out ${scrolled
-          ? "bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl shadow-2xl rounded-full px-8 py-4 scale-110"
-          : "bg-transparent py-6 px-8 scale-100"
-          }`}
+        className={`
+          w-full max-w-7xl mx-auto px-6 
+          transition-all duration-300 ease-in-out
+          flex items-center justify-between
+          ${scrolled 
+            ? "bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-lg rounded-full py-2.5 ring-1 ring-gray-200 dark:ring-white/10" 
+            : "bg-transparent py-4"
+          }
+        `}
       >
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-3xl font-extrabold font-mono bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
-              {navbar.logoText}
-            </h1>
+        
+        <a href="#" className="flex-shrink-0 group">
+          <span className="text-xl sm:text-2xl font-bold font-mono text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+            justinrich<span className="text-blue-600 dark:text-blue-400">.</span>
+          </span>
+        </a>
+
+        <div className="hidden md:flex items-center space-x-8">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-gray-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+
+        <div className="hidden md:flex items-center space-x-4">
+          <div className="flex items-center space-x-3 border-r border-gray-200 dark:border-slate-700 pr-4">
+            <a href={SOCIAL_LINKS.github} target="_blank" rel="noreferrer" className="text-gray-500 hover:text-gray-900 dark:text-slate-400 dark:hover:text-white transition-colors"><Github size={18} /></a>
+            <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noreferrer" className="text-gray-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors"><Linkedin size={18} /></a>
+            <a href={`mailto:${SOCIAL_LINKS.email}`} className="text-gray-500 hover:text-red-500 dark:text-slate-400 dark:hover:text-red-400 transition-colors"><Mail size={18} /></a>
           </div>
 
-          {/* Links */}
-          <div className="flex items-center space-x-4 sm:space-x-6">
-            <a
-              href={`mailto:${navbar.email}`}
-              className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-              aria-label="Email"
-            >
-              <Mail size={20} />
-              <span className="hidden sm:inline text-sm font-medium">Email</span>
-            </a>
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="p-2 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-600 dark:text-yellow-400 hover:bg-gray-200 dark:hover:bg-slate-700 transition-all"
+            aria-label="Toggle Theme"
+          >
+            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+        </div>
 
-            <a
-              href={navbar.linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={20} />
-              <span className="hidden sm:inline text-sm font-medium">LinkedIn</span>
-            </a>
-
-            {/* Dark Mode Toggle */}
+        <div className="md:hidden flex items-center gap-4">
             <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
-              aria-label="Toggle dark mode"
-            >
-              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-          </div>
+            onClick={() => setDarkMode(!darkMode)}
+            className="text-gray-600 dark:text-yellow-400"
+          >
+            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-gray-700 dark:text-white"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
+
+      {mobileMenuOpen && (
+        <div className="md:hidden absolute top-20 left-4 right-4 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-gray-100 dark:border-slate-800 p-6 flex flex-col space-y-4 animate-in slide-in-from-top-2">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-base font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
+          <div className="h-px bg-gray-100 dark:bg-slate-800 my-2" />
+          <div className="flex justify-center space-x-8">
+            <a href={SOCIAL_LINKS.github} target="_blank" rel="noreferrer" className="text-gray-500 dark:text-slate-400"><Github size={20} /></a>
+            <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noreferrer" className="text-gray-500 dark:text-slate-400"><Linkedin size={20} /></a>
+            <a href={`mailto:${SOCIAL_LINKS.email}`} className="text-gray-500 dark:text-slate-400"><Mail size={20} /></a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
