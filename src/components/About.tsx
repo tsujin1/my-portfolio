@@ -32,26 +32,26 @@ const getSkillStyle = (category: Skill['category']) => {
   return styles[category];
 };
 
-const AboutSection = () => {
+const About = () => {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
-          <div className="order-2 lg:order-1 relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+          <div className="relative group mx-auto w-full max-w-sm lg:max-w-md">
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
             
-            <div className="relative aspect-[3/4] w-full max-w-md mx-auto lg:max-w-full rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
+            <div className="relative aspect-[2/3] w-full rounded-[2rem] overflow-hidden bg-gray-100 dark:bg-gray-900 shadow-xl">
               <img
                 src="/images/profile.png" 
                 alt="Profile"
-                className="w-full h-full object-cover object-center transform transition duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
 
-          <div className="order-1 lg:order-2 space-y-8">
+          <div className="space-y-8">
             
             <div>
               <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 mb-4">
@@ -100,9 +100,9 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div className="grid sm:grid-cols-3 gap-4 pt-6 border-t border-gray-100 dark:border-gray-800">
+            <div className="grid sm:grid-cols-3 gap-6 sm:gap-4 pt-6 border-t border-gray-100 dark:border-gray-800">
               {VALUE_CARDS.map((card, index) => (
-                <div key={index} className="flex flex-col gap-2">
+                <div key={index} className="flex flex-col gap-2 items-center sm:items-start text-center sm:text-left">
                   <div className="p-2 w-fit rounded-lg bg-gray-50 dark:bg-gray-800/50">
                     {card.icon}
                   </div>
@@ -125,4 +125,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default About;

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Code2, Terminal, Sparkles, Download, ArrowRight } from 'lucide-react';
 import { HERO_CONTENT } from '../data/profile';
 
-const HeroSection = () => {
+const Hero = () => {
   const [typedText, setTypedText] = useState('');
   const fullText = HERO_CONTENT.name;
 
@@ -141,4 +141,4 @@ export default developer;`;
   );
 };
 
-export default HeroSection;
+export default Hero;
