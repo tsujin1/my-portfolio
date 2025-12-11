@@ -5,7 +5,7 @@ export const PROJECTS: ProjectItem[] = [
     id: 'resetnow',
     title: 'ResetNow',
     role: 'Full-Stack Developer | Personal',
-    timeline: '2025',
+    timeline: 'Dec 2025',
     description: 'A modern clinical workflow system for managing patients, prescriptions, and medical certificates.',
     technologies: ['TypeScript', 'React', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS', 'JWT', 'EmailJS'],
     highlights: [
