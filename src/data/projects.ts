@@ -2,6 +2,29 @@ import type { ProjectItem } from '../types';
 
 export const PROJECTS: ProjectItem[] = [
   {
+    id: 'resetnow',
+    title: 'ResetNow',
+    role: 'Full-Stack Developer | Personal',
+    timeline: '2025',
+    description: 'A modern clinical workflow system for managing patients, prescriptions, and medical certificates. ResetNow is a full-stack web application designed to streamline clinical workflows for healthcare professionals.',
+    technologies: ['TypeScript', 'React', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS', 'JWT', 'EmailJS'],
+    highlights: [
+      'Patient management with history tracking and analytics',
+      'Prescription management with print-ready templates',
+      'Medical certificate generation with digital signature support',
+      'Secure JWT authentication with password reset via EmailJS',
+      'Real-time dashboard with statistics and visual charts'
+    ],
+    images: [
+      { url: '/images/resetanow-1.png', alt: 'Login' },
+      { url: '/images/resetanow-2.png', alt: 'Dashboard' },
+      { url: '/images/resetanow-3.png', alt: 'Patient' },
+      { url: '/images/resetanow-4.png', alt: 'Prescription' },
+      { url: '/images/resetanow-5.png', alt: 'MedCert' },
+      { url: '/images/resetanow-6.png', alt: 'Settings' }
+    ]
+  },
+  {
     id: 'puzzlify',
     title: 'Puzzlify',
     role: 'Full-Stack Developer | Personal',
