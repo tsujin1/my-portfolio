@@ -6,14 +6,12 @@ export const PROJECTS: ProjectItem[] = [
     title: 'ResetNow',
     role: 'Full-Stack Developer | Personal',
     timeline: '2025',
-    description: 'A modern clinical workflow system for managing patients, prescriptions, and medical certificates. ResetNow is a full-stack web application designed to streamline clinical workflows for healthcare professionals.',
+    description: 'A modern clinical workflow system for managing patients, prescriptions, and medical certificates.',
     technologies: ['TypeScript', 'React', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS', 'JWT', 'EmailJS'],
     highlights: [
       'Patient management with history tracking and analytics',
       'Prescription management with print-ready templates',
-      'Medical certificate generation with digital signature support',
-      'Secure JWT authentication with password reset via EmailJS',
-      'Real-time dashboard with statistics and visual charts'
+      'Medical certificate generation with digital signature support'
     ],
     images: [
       { url: '/images/resetanow-1.png', alt: 'Login' },

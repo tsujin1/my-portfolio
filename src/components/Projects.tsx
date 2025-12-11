@@ -80,7 +80,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
           {PROJECTS.map((project) => {
             const currentIndex = imageIndexes[project.id];
             

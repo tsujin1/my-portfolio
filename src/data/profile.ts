@@ -9,14 +9,14 @@ export const SOCIAL_LINKS: SocialLinks = {
 export const HERO_CONTENT: HeroContent = {
   greeting: "Hello, I'm",
   name: "Justin Rich",
-  role: "Software Developer",
+  role: "Full-stack Developer",
   passion: "Building Digital Futures",
   tagline: "Crafting intuitive, visually appealing interfaces that enhance user interaction while delivering seamless and modern web experiences.",
   resumeLink: "/files/Justin_Dimaandal_Resume.pdf"
 };
 
 export const ABOUT_CONTENT: AboutContent = {
-  roleTitle: "SOFTWARE DEVELOPER",
+  roleTitle: "FULL-STACK DEVELOPER",
   tagline: "Building elegant solutions for a connected world.",
   description: "Passionate about creating clean, efficient, and scalable web applications that deliver great user experiences. With a focus on the MERN stack and modern styling, I turn complex problems into user-friendly interfaces."
 };
