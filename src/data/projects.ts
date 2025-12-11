@@ -20,7 +20,8 @@ export const PROJECTS: ProjectItem[] = [
       { url: '/images/resetanow-4.png', alt: 'Prescription' },
       { url: '/images/resetanow-5.png', alt: 'MedCert' },
       { url: '/images/resetanow-6.png', alt: 'Settings' }
-    ]
+    ],
+    github: 'https://github.com/tsujin1/resetanow'
   },
   {
     id: 'puzzlify',
